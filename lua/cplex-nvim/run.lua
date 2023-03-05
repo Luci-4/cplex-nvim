@@ -43,10 +43,11 @@ function get_first_model_name()
 end
 
 
-function run_configuration()
+function M.run_configuration()
     filename = get_first_model_name()
     local extension = string.sub(filename, string.find(filename, "%.[^%.]+$"))
     local model_name = string.sub(filename, 1, string.len(filename) - string.len(extension))
+
     vim.cmd("ToggleTerm")
     vim.cmd("TermExec cmd=\"oplrun -p .\"")
     vim.cmd("TermExec cmd=\"cplex\"")
