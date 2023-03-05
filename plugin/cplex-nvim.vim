@@ -14,4 +14,4 @@ let s:lua_rocks_deps_loc =  expand("<sfile>:h:r") . "/../lua/cplex-nvim/deps"
 exe "lua package.path = package.path .. ';" . s:lua_rocks_deps_loc . "/lua-?/init.lua'"
 
 command! -nargs=0 RunConfiguration lua require("cplex-nvim").run_configuration()
-command! -nargs=0 RunModel lua require("cplex-nvim").run_model()
+" command! -nargs=0 RunModel lua require("cplex-nvim").run_model()
