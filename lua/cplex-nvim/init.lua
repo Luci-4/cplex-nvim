@@ -43,7 +43,7 @@ function get_first_model_name()
 end
 
 
-function M.run_configuration()
+function run_configuration()
     filename = get_first_model_name()
     local extension = string.sub(filename, string.find(filename, "%.[^%.]+$"))
     local model_name = string.sub(filename, 1, string.len(filename) - string.len(extension))
@@ -56,5 +56,6 @@ function M.run_configuration()
     vim.cmd("TermExec cmd=\"display solution variables *\"")
 end
 
+M.run_configuration = run_configuration
 
 return M
