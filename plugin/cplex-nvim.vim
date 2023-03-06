@@ -13,5 +13,5 @@ let s:lua_rocks_deps_loc =  expand("<sfile>:h:r") . "/../lua/cplex-nvim/deps"
 let escaped_path = fnameescape(s:lua_rocks_deps_loc . "/lua-?/init.lua")
 exe "lua package.path = package.path .. ';" . escaped_path . "'"
 
-let cplex_nvim = vim.lua.require('cplex_nvim')
+let cplex_nvim = vim.lua.require('cplex-nvim')
 command! -nargs=0 RunConfiguration lua cplex_nvim.run_configuration()
