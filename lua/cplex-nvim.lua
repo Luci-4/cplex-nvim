@@ -24,7 +24,7 @@ end
 
 function get_first_model_name()
 
-    local file = 'lua/cplex-nvim/test'
+    local file = '.oplproject'
     local lines = lines_from(file)
     for content in lines:gmatch("<ref(.-)>") do
 

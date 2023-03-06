@@ -1,4 +1,3 @@
-local M = {}
 
 -- see if the file exists
 function file_exists(file)
@@ -24,7 +23,7 @@ end
 
 function get_first_model_name()
 
-    local file = 'lua/cplex-nvim/test'
+    local file = '.oplproject'
     local lines = lines_from(file)
     for content in lines:gmatch("<ref(.-)>") do
 
@@ -56,6 +55,8 @@ function run_configuration()
     vim.cmd("TermExec cmd=\"display solution variables *\"")
 end
 
+local M = {}
 M.run_configuration = run_configuration
+run_configuration()
 
 return M
